@@ -1,0 +1,217 @@
+%-------------------------
+% Kumar Priyam — Resume
+% Targeted: SDE Intern (2027 batch, 6-month + PPO), Media.net
+% Revision notes vs. the Myntra variant:
+%   - JD stresses AI tools as an accelerator "not a substitute for understanding,
+%     testing or code ownership": ClinicQ now says it was built with a coding agent,
+%     with you reviewing every change and the test suite as the gate
+%   - LLM bullet reworded around the design decision (LLM kept out of the write path),
+%     since Round 2 probes "AI/ML scope" and "engineering judgement"
+%   - New "AI/ML" skills row (LLM APIs, embeddings, semantic search, coding agents)
+%   - Concepts row adds caching, rate limiting, real-time systems (JD: high-scale,
+%     real-time, caching, concurrency, networking)
+%   - Dropped "Go REST APIs" and "Kafka" from skills (no project backs them, and
+%     Round 2 is a project deep-dive); also fixes the missing comma before Mongoose
+%   - ClinicQ scheduled-jobs bullet shortened to hold one page
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+% VERIFY: is kpriyam2005p@gmail.com the inbox you actually check?
+\begin{center}
+    {\Huge \scshape Kumar Priyam} \\ \vspace{4pt}
+    \small
+    \faEnvelope\ \href{mailto:kpriyam2005p@gmail.com}{kpriyam2005p@gmail.com} $|$
+    \faPhone\ +91-9773593089 $|$
+    \faLinkedin\ \href{https://linkedin.com/in/kumar-priyam-71bbb82a7/}{LinkedIn} $|$
+    \faGithub\ \href{https://github.com/KumarPriyam123}{GitHub} $|$
+    \faGlobe\ \href{https://www.kpriyam.me}{kpriyam.me}
+\end{center}
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    % VERIFY: change "May 2027" if NIT Delhi's result month differs.
+    % ADD: CGPA (Media.net cutoff is 6.0). Replace the degree line with e.g.
+    %   {B.Tech in Computer Science and Engineering $|$ CGPA: X.XX/10}
+    \resumeSubheading
+      {National Institute of Technology Delhi}{New Delhi, India}
+      {B.Tech in Computer Science and Engineering}{Expected: May 2027}
+  \resumeSubHeadingListEnd
+  \vspace{2pt}
+  \small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Object-Oriented Programming, Operating Systems,
+  Database Management Systems, Computer Networks.}
+\vspace{-4pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {MERN Stack Development Intern}{May 2026 -- Jul 2026}
+      {Vinidra Infotech Pvt Ltd $|$ Client-facing School Learning Management System}{Nalanda, India}
+      \resumeItemListStart
+        \resumeItem{Shipped features into an \textbf{existing team codebase}, building \textbf{REST APIs} in Node.js, Express and MongoDB for the attendance module of a school LMS, with role-scoped access for students, teachers and admins.}
+        \resumeItem{Built 5 \textbf{React.js} screens, including a bulk attendance-marking flow with optimistic UI updates and loading/error states.}
+        \resumeItem{Turned client requirements into \textbf{3 delivered iterations} across feedback cycles, using Git feature branches and \textbf{peer code review}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    % Live link points at the clinic panel (Vercel). Its API (clinicq.kpriyam.me) must be
+    % back up on the Azure VM before you apply, or the panel loads but login fails.
+    % Test after deploy: open clinicq.kpriyam.me/healthz, then log in on the panel.
+    \resumeProjectHeading
+      {\textbf{ClinicQ — WhatsApp Virtual Token Queue} $|$ \emph{Python, FastAPI, PostgreSQL, Next.js, Gemini API, Docker}}{\href{https://app.clinicq.kpriyam.me}{Live}}
+      \resumeItemListStart
+        \resumeItem{Built and deployed a \textbf{FastAPI} queue engine for single-doctor clinics that orders patients by target time and recomputes ETAs in \textbf{real time} from the doctor's live clock, with a \textbf{Next.js} PWA panel for clinic staff.}
+        \resumeItem{Guaranteed \textbf{exactly-once patient serving} under concurrent requests with transactional row locking, and deduplicated retried WhatsApp webhooks by message ID so no slot is double-booked.}
+        \resumeItem{Integrated an \textbf{LLM (Gemini API)} only to parse free-text patient messages into structured intents and kept it \textbf{out of the write path}, so every queue change stays deterministic and testable.}
+        \resumeItem{Pinned reminder and nightly-setup \textbf{scheduled jobs} to a single worker so no job fires twice.}
+        % VERIFY: keep "Claude Code as a coding agent" only if that is how you built it; be ready
+        % to give one example of agent output you rejected or fixed after review.
+        \resumeItem{Built with \textbf{Claude Code} as a coding agent against a written spec and phased plan, reviewing every change and gating it on \textbf{164 automated tests} (unit + PostgreSQL integration); shipped via Docker Compose.}
+      \resumeItemListEnd
+      \vspace{-6pt}
+
+    \resumeProjectHeading
+      {\textbf{AI Interview Platform} $|$ \emph{React, Node.js, Express, Redis, BullMQ, Docker, Socket.IO, WebRTC}}{\href{https://github.com/KumarPriyam123/Interview-Platforms_Users}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Co-built a 3-member platform for AI mock interviews, live peer-to-peer interviews and in-browser coding; owned the code-execution engine, WebRTC signaling service and React interview screens.}
+        \resumeItem{Built an \textbf{async execution pipeline} (Express $\rightarrow$ \textbf{BullMQ/Redis} queue $\rightarrow$ worker pool) that runs JS, Python, C++ and Java in \textbf{sandboxed Docker} containers and pushes results over Socket.IO.}
+        \resumeItem{Kept languages pluggable through an \textbf{abstract handler class} (one subclass per language) and wrote a \textbf{security audit} documenting the sandbox's isolation controls and residual risks.}
+        \resumeItem{Built the \textbf{WebRTC} signaling service (Socket.IO + PeerJS) for live 1:1 interviews, storing room state in \textbf{Redis} with an in-memory fallback and initiating calls from one side only to prevent call glare.}
+      \resumeItemListEnd
+      \vspace{-6pt}
+
+    \resumeProjectHeading
+      {\textbf{JobMatch — Semantic Job-Matching Platform} $|$ \emph{Next.js, FastAPI, PostgreSQL/pgvector, n8n}}{\href{https://jobmatch.kpriyam.me}{Live}}
+      \resumeItemListStart
+        \resumeItem{Built a multi-tenant \textbf{Next.js + FastAPI} platform that ranks jobs by \textbf{vector-embedding similarity} (semantic search in pgvector), isolating each user's data with PostgreSQL \textbf{Row-Level Security} and JWT auth.}
+        \resumeItem{Automated daily ingestion across job APIs and \textbf{Greenhouse ATS} boards with SHA-256 deduplication for \textbf{idempotent, crash-safe runs}, request pacing within provider \textbf{rate limits} and a 10-day freshness filter.}
+        % Name the host only once the backend is back up on it (DigitalOcean account is suspended).
+        \resumeItem{Deployed the \textbf{Dockerized} FastAPI backend behind a \textbf{Cloudflare Tunnel} (zero open ports); frontend on \textbf{Vercel}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------TECHNICAL SKILLS-----------
+% Removed "Go REST APIs" and "Kafka": put them back only if you can defend them in a deep-dive.
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, TypeScript, C++, C, SQL} \\
+     \textbf{Backend}{: Node.js, Express.js, FastAPI, REST APIs, Socket.IO, WebRTC, BullMQ, Mongoose, Pydantic} \\
+     \textbf{Frontend}{: React.js, Next.js, Tailwind CSS, HTML/CSS} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, pgvector, Supabase} \\
+     \textbf{AI/ML}{: LLM APIs (Gemini), Structured Intent Extraction, Vector Embeddings \& Semantic Search, Coding Agents (Claude Code)} \\
+     \textbf{Tools}{: Git, GitHub, Docker, Docker Compose, Linux, Vercel, Cloudflare, pytest, Postman} \\
+     \textbf{Concepts}{: DSA, OOP, Concurrency \& Transactions, Idempotency, Caching, Rate Limiting, Real-time Systems, Unit \& Integration Testing}
+    }}
+ \end{itemize}
+ \vspace{-14pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+ \resumeSubHeadingListStart
+    % ADD: your LeetCode/Codeforces/CodeChef rating and a profile link if the rating is decent
+    %   (e.g. "LeetCode rating 1750+ (top X%)") -- the JD lists competitive programming.
+    \resumeItem{Solved 300+ Data Structures \& Algorithms problems on LeetCode.}
+    \resumeItem{Ranked 5th out of 200+ teams at Cas-a-thon 3.0 (2024), a national-level case study competition.}
+ \resumeSubHeadingListEnd
+
+\end{document}
